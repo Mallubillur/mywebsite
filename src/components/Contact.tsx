@@ -221,7 +221,7 @@ export function Contact() {
                     Email
                   </small>
                   <a
-                    href="mailto:mallikarjun@example.com"
+                    href="mailto:billurmallikarjun@gmail.com"
                     style={{
                       color: "var(--accent)",
                       textDecoration: "none",
