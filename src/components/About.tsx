@@ -94,9 +94,9 @@ export function About() {
               <div style={{ display: "flex", justifyContent: "space-between", alignItems: "start", marginBottom: "0.5rem", flexWrap: "wrap", gap: "0.5rem" }}>
                 <div>
                   <p style={{ fontWeight: 600 }}>Bachelor of Technology in Computer Science</p>
-                  <p style={{ color: "var(--muted)" }}>University Name</p>
+                  <p style={{ color: "var(--muted)" }}>Dayananda Sagar University</p>
                 </div>
-                <small style={{ color: "var(--muted)" }}>2018 - 2022</small>
+                <small style={{ color: "var(--muted)" }}>2022 - 2026</small>
               </div>
             </div>
 
@@ -107,11 +107,11 @@ export function About() {
             <ul style={{ listStyle: "none", display: "flex", flexDirection: "column", gap: "0.5rem" }}>
               <li style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
                 <div style={{ width: "6px", height: "6px", backgroundColor: "var(--accent)", borderRadius: "50%" }} />
-                <span style={{ color: "var(--muted)" }}>Advanced React & Redux</span>
+                <span style={{ color: "var(--muted)" }}>Java Full Stack -Course Completion </span>
               </li>
               <li style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
                 <div style={{ width: "6px", height: "6px", backgroundColor: "var(--accent)", borderRadius: "50%" }} />
-                <span style={{ color: "var(--muted)" }}>Web Accessibility Specialist</span>
+                <span style={{ color: "var(--muted)" }}>Microsoft Power BI from Infosys Springboard </span>
               </li>
             </ul>
           </div>
