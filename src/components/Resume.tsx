@@ -39,8 +39,15 @@ export function Resume() {
   ];
 
   const handleDownloadResume = () => {
-    alert("Resume download would start here. In production, link to actual resume PDF.");
-  };
+  const link = document.createElement("a");
+  link.href = "/Mallikarjun_Billur_Resume.pdf";  // File in public/
+  link.download = "Mallikarjun_Billur_Resume.pdf"; 
+  document.body.appendChild(link);
+  link.click();
+  link.remove();
+  alert("Resume download would start here. In production, link to actual resume PDF.");
+};
+
 
   return (
     <section
