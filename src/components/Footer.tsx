@@ -80,7 +80,7 @@ export function Footer() {
             <h3 style={{ marginBottom: "1rem", fontSize: "1.125rem" }}>Get In Touch</h3>
             <div style={{ display: "flex", flexDirection: "column", gap: "0.5rem" }}>
               <a
-                href="mailto:mallikarjun@example.com"
+                href="mailto:billurmallikarjun4@gmail.com"
                 style={{
                   color: "var(--muted)",
                   textDecoration: "none",
@@ -93,7 +93,7 @@ export function Footer() {
                   e.currentTarget.style.color = "var(--muted)";
                 }}
               >
-                mallikarjun@example.com
+                billurmallikarjun4@gmail.com
               </a>
               <p style={{ color: "var(--muted)" }}>Bangalore, India</p>
             </div>
