@@ -64,14 +64,10 @@ export function About() {
           >
             <h3 style={{ marginBottom: "1rem" }}>Who I Am</h3>
             <p style={{ color: "var(--muted)", marginBottom: "1rem" }}>
-              I'm a passionate Frontend Developer with a keen eye for design and a commitment to creating 
-              seamless user experiences. With expertise in modern web technologies, I transform ideas into 
-              responsive, accessible, and performant web applications.
+              B.Tech Computer Science & Engineering student with strong expertise in Java, Python, Data Structures, and Machine Learning. Experienced in developing AI-powered solutions, data analytics dashboards, and web applications through academic coursework and hands-on projects. Passionate about building intelligent systems that solve real-world problems
             </p>
             <p style={{ color: "var(--muted)" }}>
-              My approach combines technical excellence with creative problem-solving, ensuring every project 
-              not only meets requirements but exceeds expectations. I thrive in collaborative environments 
-              and am always eager to learn new technologies.
+              Proficient in problem-solving, teamwork, and analytical thinking, with a strong interest in pursuing a career in Software Development, Data Science, or Artificial Intelligence. Continuously learning and exploring new technologies to enhance technical skills and contribute to innovative, impactful projects.
             </p>
           </div>
 

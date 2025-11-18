@@ -46,7 +46,7 @@ export function Contact() {
     {
       name: "Email",
       icon: Mail,
-      url: "mailto:mallikarjun@example.com",
+      url: "mailto:billurmallikarjun4@gmail.com",
       color: "var(--accent)",
     },
   ];
@@ -221,13 +221,13 @@ export function Contact() {
                     Email
                   </small>
                   <a
-                    href="mailto:billurmallikarjun@gmail.com"
+                    href="mailto:billurmallikarjun4@gmail.com"
                     style={{
                       color: "var(--accent)",
                       textDecoration: "none",
                     }}
                   >
-                    mallikarjun@example.com
+                    billurmallikarjun4@gmail.com
                   </a>
                 </div>
                 <div>

@@ -68,8 +68,10 @@ export function Hero() {
               maxWidth: "600px",
             }}
           >
-            I craft elegant, user-centric web experiences with modern technologies.
-            Passionate about clean code, responsive design, and bringing ideas to life.
+           B.Tech Computer Science & Engineering student with strong expertise in Java, Python, Data Structures, and 
+Machine Learning. Skilled in developing AI-powered solutions, data analytics dashboards, and web applications 
+through academic and self-driven projects. Proficient in problem-solving, teamwork, and analytical thinking, with 
+a strong interest in pursuing a career in Software Development, Data Science, or Artificial Intelligence.
           </p>
 
           <div
