@@ -3,9 +3,15 @@ import { ArrowRight, Download } from "lucide-react";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
 
 export function Hero() {
+
+  // ✅ Correct GitHub Pages compatible resume download
   const handleDownloadResume = () => {
-    // Mock download functionality
-    alert("Resume download would start here. In production, link to actual resume PDF.");
+    const link = document.createElement("a");
+    link.href = "Mallikarjun_Billur_Resume.pdf"; // MUST be relative for GitHub Pages
+    link.download = "Mallikarjun_Billur_Resume.pdf";
+    document.body.appendChild(link);
+    link.click();
+    link.remove();
   };
 
   return (
@@ -48,12 +54,12 @@ export function Hero() {
               Frontend Developer
             </small>
           </div>
-          
+
           <h1 style={{ marginBottom: "1rem", color: "var(--text)" }}>
             Hi, I'm{" "}
             <span style={{ color: "var(--accent)" }}>Mallikarjun Billur</span>
           </h1>
-          
+
           <p
             style={{
               fontSize: "1.25rem",
@@ -62,7 +68,7 @@ export function Hero() {
               maxWidth: "600px",
             }}
           >
-            I craft elegant, user-centric web experiences with modern technologies. 
+            I craft elegant, user-centric web experiences with modern technologies.
             Passionate about clean code, responsive design, and bringing ideas to life.
           </p>
 
@@ -76,6 +82,8 @@ export function Hero() {
             <Button href="#projects" variant="primary" ariaLabel="View my projects">
               View Projects <ArrowRight size={20} />
             </Button>
+
+            {/* ✅ Updated Download Resume Button */}
             <Button
               variant="secondary"
               onClick={handleDownloadResume}
