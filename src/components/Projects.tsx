@@ -21,7 +21,7 @@ export function Projects() {
       title: "Fruit Recognition & Price Estimation",
       description:
         "Real-time fruit detection using YOLOv5 + OpenCV. Detects fruits and estimates price based on type and weight estimation. Implemented using Python, OpenCV and YOLOv5; includes Jupyter Notebook for experiments.",
-      image: "/images/fruit recognigation.jpeg", // exact filename from your public/images (keep the same name)
+      image: "/images/fruit-recognition.jpeg", // exact filename from your public/images (keep the same name)
       tags: ["Python", "YOLOv5", "OpenCV", "Jupyter Notebook"],
       githubUrl: "https://github.com/YOUR_GITHUB/fruit-recognition", // update
       liveUrl: "", // no live demo
