@@ -3,16 +3,12 @@ import { ProjectCard } from "./ProjectCard";
 
 /**
  * Projects.tsx
- * Replaced placeholder projects with actual projects from your resume.
+ * Projects replaced with the three real projects from your resume.
  *
- * NOTE: Update githubUrl / liveUrl values to point to your repositories or demos.
- * The resumeFilePath below points to the uploaded resume file in the conversation history.
- * If you want to link/download the resume from the site, move the PDF into `public/` and
- * update the path accordingly (e.g., "/Mallikarjun_Billur_Resume.pdf").
+ * NOTE: Update githubUrl / liveUrl values to actual repo/demo links.
  */
 
 // local uploaded resume path (from conversation history)
-// Developer instruction: keep this path as-is now; you can move the file to public/ later.
 export const resumeFilePath = "/mnt/data/Mallikarjun_ENG22CS0099.pdf";
 
 export function Projects() {
@@ -21,7 +17,7 @@ export function Projects() {
       title: "Fruit Recognition & Price Estimation",
       description:
         "Real-time fruit detection using YOLOv5 + OpenCV. Detects fruits and estimates price based on type and weight estimation. Implemented using Python, OpenCV and YOLOv5; includes Jupyter Notebook for experiments.",
-      image: "/images/fruit-recognition.jpeg", // exact filename from your public/images (keep the same name)
+      image: "/images/fruit-recognition.jpeg",
       tags: ["Python", "YOLOv5", "OpenCV", "Jupyter Notebook"],
       githubUrl: "https://github.com/YOUR_GITHUB/fruit-recognition", // update
       liveUrl: "", // no live demo
@@ -33,7 +29,7 @@ export function Projects() {
       image: "/images/amazon-prime.jpg",
       tags: ["Power BI", "Excel", "DAX", "Data Cleaning"],
       githubUrl: "https://github.com/YOUR_GITHUB/amazon-prime-analysis", // update
-      liveUrl: "", // can point to a published PBIX or report if available
+      liveUrl: "", // update if you publish a report
     },
     {
       title: "Crime Rate Prediction",
@@ -71,7 +67,15 @@ export function Projects() {
               borderRadius: "2px",
             }}
           />
-          <p style={{ color: "var(--muted)", marginTop: "1rem", maxWidth: "600px", margin: "1rem auto 0" }}>
+          <p
+            style={{
+              color: "var(--muted)",
+              marginTop: "1rem",
+              maxWidth: "600px",
+              marginLeft: "auto",
+              marginRight: "auto",
+            }}
+          >
             A showcase of my recent work and academic projects
           </p>
         </div>
