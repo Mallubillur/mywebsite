@@ -1,52 +1,48 @@
+import React from "react";
 import { ProjectCard } from "./ProjectCard";
+
+/**
+ * Projects.tsx
+ * Replaced placeholder projects with actual projects from your resume.
+ *
+ * NOTE: Update githubUrl / liveUrl values to point to your repositories or demos.
+ * The resumeFilePath below points to the uploaded resume file in the conversation history.
+ * If you want to link/download the resume from the site, move the PDF into `public/` and
+ * update the path accordingly (e.g., "/Mallikarjun_Billur_Resume.pdf").
+ */
+
+// local uploaded resume path (from conversation history)
+// Developer instruction: keep this path as-is now; you can move the file to public/ later.
+export const resumeFilePath = "/mnt/data/Mallikarjun_ENG22CS0099.pdf";
 
 export function Projects() {
   const projects = [
     {
-      image: "https://images.unsplash.com/photo-1555949963-aa79dcee981c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhYnN0cmFjdCUyMGNvZGluZyUyMHRlY2hub2xvZ3l8ZW58MXx8fHwxNzYzMzkxNTI0fDA&ixlib=rb-4.1.0&q=80&w=1080",
-      title: "E-Commerce Platform",
-      description: "Modern e-commerce solution with cart, payments, and admin dashboard.",
-      tags: ["React", "Node.js", "MongoDB", "Stripe"],
-      githubUrl: "https://github.com",
-      liveUrl: "https://example.com",
+      title: "Fruit Recognition & Price Estimation",
+      description:
+        "Real-time fruit detection using YOLOv5 + OpenCV. Detects fruits and estimates price based on type and weight estimation. Implemented using Python, OpenCV and YOLOv5; includes Jupyter Notebook for experiments.",
+      image: "/images/fruit recognigation.jpeg", // exact filename from your public/images (keep the same name)
+      tags: ["Python", "YOLOv5", "OpenCV", "Jupyter Notebook"],
+      githubUrl: "https://github.com/YOUR_GITHUB/fruit-recognition", // update
+      liveUrl: "", // no live demo
     },
     {
-      image: "https://images.unsplash.com/photo-1637937459053-c788742455be?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3ZWIlMjBkZXZlbG9wbWVudCUyMHNjcmVlbnxlbnwxfHx8fDE3NjMzODE2Njd8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      title: "Task Management App",
-      description: "Collaborative task manager with real-time updates and team features.",
-      tags: ["Next.js", "TypeScript", "PostgreSQL", "Tailwind"],
-      githubUrl: "https://github.com",
-      liveUrl: "https://example.com",
+      title: "Amazon Prime Video Analysis",
+      description:
+        "Interactive Power BI dashboard analyzing movies & TV shows on Amazon Prime — data cleaning, transformation and DAX measures to surface insights and visuals.",
+      image: "/images/amazon-prime.jpg",
+      tags: ["Power BI", "Excel", "DAX", "Data Cleaning"],
+      githubUrl: "https://github.com/YOUR_GITHUB/amazon-prime-analysis", // update
+      liveUrl: "", // can point to a published PBIX or report if available
     },
     {
-      image: "https://images.unsplash.com/photo-1566915896913-549d796d2166?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkZXZlbG9wZXIlMjB3b3Jrc3BhY2UlMjBtaW5pbWFsfGVufDF8fHx8MTc2MzM5MTUyNHww&ixlib=rb-4.1.0&q=80&w=1080",
-      title: "Weather Dashboard",
-      description: "Beautiful weather app with forecasts and location-based insights.",
-      tags: ["React", "OpenWeather API", "CSS3"],
-      githubUrl: "https://github.com",
-      liveUrl: "https://example.com",
-    },
-    {
-      image: "https://images.unsplash.com/photo-1555949963-aa79dcee981c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhYnN0cmFjdCUyMGNvZGluZyUyMHRlY2hub2xvZ3l8ZW58MXx8fHwxNzYzMzkxNTI0fDA&ixlib=rb-4.1.0&q=80&w=1080",
-      title: "Portfolio Builder",
-      description: "Drag-and-drop portfolio creator with customizable templates.",
-      tags: ["Vue.js", "Vuex", "Firebase"],
-      githubUrl: "https://github.com",
-    },
-    {
-      image: "https://images.unsplash.com/photo-1637937459053-c788742455be?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3ZWIlMjBkZXZlbG9wbWVudCUyMHNjcmVlbnxlbnwxfHx8fDE3NjMzODE2Njd8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      title: "Social Media Analytics",
-      description: "Track and analyze social media metrics with interactive charts.",
-      tags: ["React", "D3.js", "Express", "MySQL"],
-      liveUrl: "https://example.com",
-    },
-    {
-      image: "https://images.unsplash.com/photo-1566915896913-549d796d2166?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkZXZlbG9wZXIlMjB3b3Jrc3BhY2UlMjBtaW5pbWFsfGVufDF8fHx8MTc2MzM5MTUyNHww&ixlib=rb-4.1.0&q=80&w=1080",
-      title: "Recipe Finder",
-      description: "Search and save recipes with nutritional information and filters.",
-      tags: ["JavaScript", "HTML5", "CSS3", "API"],
-      githubUrl: "https://github.com",
-      liveUrl: "https://example.com",
+      title: "Crime Rate Prediction",
+      description:
+        "Machine learning model to predict crime rates using historical datasets. Includes preprocessing, feature engineering, model training, and visualization to identify trends and hotspots.",
+      image: "/images/crime-prediction.jpg",
+      tags: ["Python", "Machine Learning", "Feature Engineering", "Visualization"],
+      githubUrl: "https://github.com/YOUR_GITHUB/crime-rate-prediction", // update
+      liveUrl: "", // update if you have a demo
     },
   ];
 
@@ -76,7 +72,7 @@ export function Projects() {
             }}
           />
           <p style={{ color: "var(--muted)", marginTop: "1rem", maxWidth: "600px", margin: "1rem auto 0" }}>
-            A showcase of my recent work and side projects
+            A showcase of my recent work and academic projects
           </p>
         </div>
 
@@ -117,7 +113,14 @@ export function Projects() {
             grid-template-columns: 1fr;
           }
         }
+
+        @keyframes fadeInUp {
+          from { opacity: 0; transform: translateY(12px); }
+          to { opacity: 1; transform: translateY(0); }
+        }
       `}</style>
     </section>
   );
 }
+
+export default Projects;
