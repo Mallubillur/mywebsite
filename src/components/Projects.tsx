@@ -3,42 +3,43 @@ import { ProjectCard } from "./ProjectCard";
 
 /**
  * Projects.tsx
- * Projects replaced with the three real projects from your resume.
- *
- * NOTE: Update githubUrl / liveUrl values to actual repo/demo links.
+ * Uses `new URL(..., import.meta.url).href` to resolve public images safely with Vite.
+ * Replace your existing src/components/Projects.tsx with this file.
  */
 
-// local uploaded resume path (from conversation history)
-export const resumeFilePath = "/mnt/data/Mallikarjun_ENG22CS0099.pdf";
-
 export function Projects() {
+  // Resolve public images with new URL so Vite will produce correct runtime URLs
+  const fruitImg = new URL("/images/fruit-recognition.jpeg", import.meta.url).href;
+  const amazonImg = new URL("/images/amazon-prime.jpg", import.meta.url).href;
+  const crimeImg = new URL("/images/crime-prediction.jpg", import.meta.url).href;
+
   const projects = [
     {
       title: "Fruit Recognition & Price Estimation",
       description:
         "Real-time fruit detection using YOLOv5 + OpenCV. Detects fruits and estimates price based on type and weight estimation. Implemented using Python, OpenCV and YOLOv5; includes Jupyter Notebook for experiments.",
-      image: "/images/fruit-recognition.jpeg",
+      image: fruitImg,
       tags: ["Python", "YOLOv5", "OpenCV", "Jupyter Notebook"],
-      githubUrl: "https://github.com/YOUR_GITHUB/fruit-recognition", // update
-      liveUrl: "", // no live demo
+      githubUrl: "https://github.com/YOUR_GITHUB/fruit-recognition",
+      liveUrl: "",
     },
     {
       title: "Amazon Prime Video Analysis",
       description:
         "Interactive Power BI dashboard analyzing movies & TV shows on Amazon Prime — data cleaning, transformation and DAX measures to surface insights and visuals.",
-      image: "/images/amazon-prime.jpg",
+      image: amazonImg,
       tags: ["Power BI", "Excel", "DAX", "Data Cleaning"],
-      githubUrl: "https://github.com/YOUR_GITHUB/amazon-prime-analysis", // update
-      liveUrl: "", // update if you publish a report
+      githubUrl: "https://github.com/YOUR_GITHUB/amazon-prime-analysis",
+      liveUrl: "",
     },
     {
       title: "Crime Rate Prediction",
       description:
         "Machine learning model to predict crime rates using historical datasets. Includes preprocessing, feature engineering, model training, and visualization to identify trends and hotspots.",
-      image: "/images/crime-prediction.jpg",
+      image: crimeImg,
       tags: ["Python", "Machine Learning", "Feature Engineering", "Visualization"],
-      githubUrl: "https://github.com/YOUR_GITHUB/crime-rate-prediction", // update
-      liveUrl: "", // update if you have a demo
+      githubUrl: "https://github.com/YOUR_GITHUB/crime-rate-prediction",
+      liveUrl: "",
     },
   ];
 
