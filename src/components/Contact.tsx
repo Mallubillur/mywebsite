@@ -15,8 +15,7 @@ export function Contact() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
-    // Mock form submission
+
     setTimeout(() => {
       alert("Thank you for your message! I'll get back to you soon.");
       setFormData({ name: "", email: "", message: "" });
@@ -34,13 +33,13 @@ export function Contact() {
     {
       name: "LinkedIn",
       icon: Linkedin,
-      url: "https://linkedin.com/in/mallikarjunbillur",
+      url: "https://www.linkedin.com/in/mallikarjun-billur-82977032a",
       color: "#0077b5",
     },
     {
       name: "Twitter",
       icon: Twitter,
-      url: "https://twitter.com/mallikarjunbillur",
+      url: "https://x.com/mallikarjunmb12",
       color: "#1da1f2",
     },
     {
@@ -59,12 +58,8 @@ export function Contact() {
         backgroundColor: "var(--card)",
       }}
     >
-      <div
-        style={{
-          maxWidth: "1200px",
-          margin: "0 auto",
-        }}
-      >
+      <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
+        {/* Heading */}
         <div style={{ textAlign: "center", marginBottom: "3rem" }}>
           <h2 style={{ marginBottom: "1rem" }}>Get In Touch</h2>
           <div
@@ -76,20 +71,19 @@ export function Contact() {
               borderRadius: "2px",
             }}
           />
-          <p style={{ color: "var(--muted)", marginTop: "1rem", maxWidth: "600px", margin: "1rem auto 0" }}>
+          <p
+            style={{
+              color: "var(--muted)",
+              marginTop: "1rem",
+              maxWidth: "600px",
+              margin: "1rem auto 0",
+            }}
+          >
             Have a project in mind or just want to chat? Feel free to reach out!
           </p>
         </div>
 
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "1fr",
-            gap: "3rem",
-            alignItems: "start",
-          }}
-          className="contact-grid"
-        >
+        <div className="contact-grid">
           {/* Contact Form */}
           <div
             style={{
@@ -98,10 +92,13 @@ export function Contact() {
               borderRadius: "1rem",
               border: "1px solid var(--border)",
             }}
-            className="animate-fade-in-up"
           >
             <h3 style={{ marginBottom: "1.5rem" }}>Send a Message</h3>
-            <form onSubmit={handleSubmit} style={{ display: "flex", flexDirection: "column", gap: "1.5rem" }}>
+
+            <form
+              onSubmit={handleSubmit}
+              style={{ display: "flex", flexDirection: "column", gap: "1.5rem" }}
+            >
               <InputField
                 type="text"
                 name="name"
@@ -109,8 +106,11 @@ export function Contact() {
                 placeholder="Your name"
                 required
                 value={formData.name}
-                onChange={(value) => setFormData({ ...formData, name: value })}
+                onChange={(value) =>
+                  setFormData({ ...formData, name: value })
+                }
               />
+
               <InputField
                 type="email"
                 name="email"
@@ -118,8 +118,11 @@ export function Contact() {
                 placeholder="your.email@example.com"
                 required
                 value={formData.email}
-                onChange={(value) => setFormData({ ...formData, email: value })}
+                onChange={(value) =>
+                  setFormData({ ...formData, email: value })
+                }
               />
+
               <InputField
                 type="textarea"
                 name="message"
@@ -127,140 +130,70 @@ export function Contact() {
                 placeholder="Tell me about your project..."
                 required
                 value={formData.message}
-                onChange={(value) => setFormData({ ...formData, message: value })}
+                onChange={(value) =>
+                  setFormData({ ...formData, message: value })
+                }
               />
-              <Button
-                type="submit"
-                variant="primary"
-                disabled={isSubmitting}
-                ariaLabel="Send message"
-              >
+
+              <Button type="submit" variant="primary" disabled={isSubmitting}>
                 <Send size={20} />
                 {isSubmitting ? "Sending..." : "Send Message"}
               </Button>
             </form>
           </div>
 
-          {/* Social Links & Info */}
-          <div style={{ display: "flex", flexDirection: "column", gap: "2rem" }}>
-            <div
-              style={{
-                backgroundColor: "var(--bg)",
-                padding: "2rem",
-                borderRadius: "1rem",
-                border: "1px solid var(--border)",
-              }}
-              className="animate-fade-in-up"
-            >
-              <h3 style={{ marginBottom: "1rem" }}>Connect With Me</h3>
-              <p style={{ color: "var(--muted)", marginBottom: "1.5rem" }}>
-                Let's connect on social media or drop me an email. I'm always open to discussing new projects and opportunities.
-              </p>
+          {/* Social Links */}
+          <div
+            style={{
+              backgroundColor: "var(--bg)",
+              padding: "2rem",
+              borderRadius: "1rem",
+              border: "1px solid var(--border)",
+            }}
+          >
+            <h3 style={{ marginBottom: "1rem" }}>Connect With Me</h3>
+            <p style={{ color: "var(--muted)", marginBottom: "1.5rem" }}>
+              Let's connect on social media or drop me an email.
+            </p>
 
-              <div
-                style={{
-                  display: "flex",
-                  gap: "1rem",
-                  flexWrap: "wrap",
-                }}
-              >
-                {socialLinks.map((social) => {
-                  const Icon = social.icon;
-                  return (
-                    <a
-                      key={social.name}
-                      href={social.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      style={{
-                        display: "flex",
-                        alignItems: "center",
-                        justifyContent: "center",
-                        width: "48px",
-                        height: "48px",
-                        backgroundColor: "var(--card)",
-                        borderRadius: "0.5rem",
-                        border: "2px solid var(--border)",
-                        color: "var(--text)",
-                        transition: "all 0.3s ease",
-                      }}
-                      onMouseEnter={(e) => {
-                        e.currentTarget.style.borderColor = "var(--accent)";
-                        e.currentTarget.style.color = social.color;
-                        e.currentTarget.style.transform = "translateY(-4px)";
-                        e.currentTarget.style.boxShadow = "0 4px 12px var(--shadow)";
-                      }}
-                      onMouseLeave={(e) => {
-                        e.currentTarget.style.borderColor = "var(--border)";
-                        e.currentTarget.style.color = "var(--text)";
-                        e.currentTarget.style.transform = "translateY(0)";
-                        e.currentTarget.style.boxShadow = "none";
-                      }}
-                      aria-label={`Visit ${social.name} profile`}
-                    >
-                      <Icon size={22} />
-                    </a>
-                  );
-                })}
-              </div>
-            </div>
-
-            <div
-              style={{
-                backgroundColor: "var(--bg)",
-                padding: "2rem",
-                borderRadius: "1rem",
-                border: "1px solid var(--border)",
-              }}
-              className="animate-fade-in-up"
-            >
-              <h3 style={{ marginBottom: "1rem" }}>Quick Info</h3>
-              <div style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
-                <div>
-                  <small style={{ color: "var(--muted)", display: "block", marginBottom: "0.25rem" }}>
-                    Email
-                  </small>
+            <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap" }}>
+              {socialLinks.map((social) => {
+                const Icon = social.icon;
+                return (
                   <a
-                    href="mailto:billurmallikarjun4@gmail.com"
+                    key={social.name}
+                    href={social.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={social.name}
                     style={{
-                      color: "var(--accent)",
-                      textDecoration: "none",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      width: "48px",
+                      height: "48px",
+                      backgroundColor: "var(--card)",
+                      borderRadius: "0.5rem",
+                      border: "2px solid var(--border)",
+                      color: "var(--text)",
+                      transition: "all 0.3s ease",
                     }}
                   >
-                    billurmallikarjun4@gmail.com
+                    <Icon size={22} />
                   </a>
-                </div>
-                <div>
-                  <small style={{ color: "var(--muted)", display: "block", marginBottom: "0.25rem" }}>
-                    Location
-                  </small>
-                  <span>Bangalore, India</span>
-                </div>
-                <div>
-                  <small style={{ color: "var(--muted)", display: "block", marginBottom: "0.25rem" }}>
-                    Availability
-                  </small>
-                  <div style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
-                    <div
-                      style={{
-                        width: "8px",
-                        height: "8px",
-                        backgroundColor: "var(--success)",
-                        borderRadius: "50%",
-                      }}
-                    />
-                    <span>Open to opportunities</span>
-                  </div>
-                </div>
-              </div>
+                );
+              })}
             </div>
           </div>
         </div>
       </div>
 
+      {/* Responsive Grid */}
       <style>{`
         .contact-grid {
+          display: grid;
           grid-template-columns: 1.5fr 1fr;
+          gap: 3rem;
         }
 
         @media (max-width: 768px) {
