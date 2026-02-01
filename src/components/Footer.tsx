@@ -93,7 +93,7 @@ export function Footer() {
                   e.currentTarget.style.color = "var(--muted)";
                 }}
               >
-                billurmallikarjun4@gmail.com
+              billurmallikarjun4@gmail.com
               </a>
               <p style={{ color: "var(--muted)" }}>Bangalore, India</p>
             </div>
