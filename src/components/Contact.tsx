@@ -12,15 +12,33 @@ export function Contact() {
 
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  // ✅ CONNECTED TO BACKEND
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    setTimeout(() => {
-      alert("Thank you for your message! I'll get back to you soon.");
-      setFormData({ name: "", email: "", message: "" });
+    try {
+      const response = await fetch("http://localhost:5000/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (data.success) {
+        alert("Message sent successfully!");
+        setFormData({ name: "", email: "", message: "" });
+      } else {
+        alert("Failed to send message");
+      }
+    } catch (error) {
+      alert("Server error. Please try again later.");
+    } finally {
       setIsSubmitting(false);
-    }, 1000);
+    }
   };
 
   const socialLinks = [
